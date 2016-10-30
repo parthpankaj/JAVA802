@@ -1,18 +1,47 @@
-# JAVA802
-# JAVA081
-public class Brandname<T> {
-	public static void main(String[] args){
-		Brandname<String> bd=new Brandname<String>();
-		bd.add("xyz");
-		System.out.println("the values are: "+bd);
-	}
+import java.util.Scanner;
+public class Count {
 
-	private void add(String string) {
-		// TODO Auto-generated method stub
-		
-	}
+
+    public static void main(String[] args) throws Exception {
+
+
+        java.io.File file = new java.io.File("C://file1.txt");
+
+ 
+
+        Scanner input = new Scanner(file);
+
+        String fileContent = "";
+
+
+        while (input.hasNext()) {
+
+            fileContent += input.next() + " ";
+
+        }
+
+     
+
+        input.close();
+
+        char[] charArr = fileContent.toCharArray();
+
+        int counter = 0;
+
+        for(char c : charArr)
+
+        {
+
+              if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y')
+
+                   counter++;
+
+        }
+
+        
+
+        
+        System.out.println("Number of Vowels: " + counter);
+
+    }
 }
-
-
-
-NOT UNERSTAND PLEASE HELP ME OUT
